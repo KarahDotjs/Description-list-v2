@@ -1,9 +1,5 @@
 <script setup>
 import CardDescription from './components/CardDescription.vue'
-import Title from './components/Title.vue'
-import FirstParagraph from './components/FirstParagraph.vue'
-import SecondParagraph from './components/SecondParagraph.vue'
-import ThirdParagraph from './components/ThirdParagraph.vue'
 
 const personsList = [
   {
@@ -16,9 +12,9 @@ const personsList = [
     pet: {
       name: 'Whiskers',
       age: 2,
-      species: 'ferret'
+      species: 'ferret',
     },
-    favoriteColor: 'red'
+    favoriteColor: 'red',
   },
   {
     gender: 'male',
@@ -30,9 +26,9 @@ const personsList = [
     pet: {
       name: 'Nala',
       age: 6,
-      species: 'dog'
+      species: 'dog',
     },
-    favoriteColor: 'blue'
+    favoriteColor: 'blue',
   },
   {
     gender: 'female',
@@ -44,9 +40,9 @@ const personsList = [
     pet: {
       name: 'Paws',
       age: 3,
-      species: 'cat'
+      species: 'cat',
     },
-    favoriteColor: 'orange'
+    favoriteColor: 'orange',
   },
   {
     gender: 'male',
@@ -58,37 +54,35 @@ const personsList = [
     pet: {
       name: 'Bubble',
       age: 4,
-      species: 'snake'
+      species: 'snake',
     },
-    favoriteColor: 'purple'
-  }
+    favoriteColor: 'purple',
+  },
 ]
 </script>
 
 <template>
   <main>
-    <div class="main-container">
-    
-      <CardDescription />
-      <CardDescription />
-      <CardDescription />
-      <CardDescription />
-      <Title />
-      <FirstParagraph />
-      <SecondParagraph />
-      <ThirdParagraph />
+    <h1>Description List</h1>
+    <div>
+      <CardDescription :personInfos="personsList[0]" />
+      <CardDescription :personInfos="personsList[1]" />
+      <CardDescription :personInfos="personsList[2]" />
+      <CardDescription :personInfos="personsList[3]" />
     </div>
   </main>
 </template>
 
 <style scoped>
 main {
+
+min-height: 100vh;
   padding: 50px;
   background-color: #c9e1c2;
-  height: 100vw;
 }
-.main-container {
+main > div {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  
 }
 </style>
